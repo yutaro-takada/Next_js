@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { InputForm } from '../components/InputForm'
+import { Title } from '../components/Title'
+import { TodoList } from '../components/TodoList'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 export default function Home() {
   return (
@@ -11,16 +16,18 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Read{' '}
+          {/* Read{' '}
           <Link href="/posts/first-post">
             <a>this page!</a>
-          </Link>
+          </Link> */}
+          <h2 className="title">
+            <i className="fab fa-accessible-icon"></i>
+            Welcome <a href="https://nextjs.org">Next.js!</a>
+          </h2>
         </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
+        <Title />
+        <InputForm />
+        <TodoList />
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>
@@ -31,22 +38,12 @@ export default function Home() {
             <h3>Learn &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
-
-          <a href="https://github.com/vercel/next.js/tree/master/examples" className="card">
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" className="card">
-            <h3>Deploy &rarr;</h3>
-            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
         </div>
       </main>
 
       <footer>
         <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-          Powered by <img src="/img/vercel.svg" alt="Vercel" className="logo" />
+          Powered by <img src="../public/img/vercel.svg" alt="Vercel" className="logo" />
         </a>
       </footer>
 
