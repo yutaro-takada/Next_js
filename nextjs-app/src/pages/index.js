@@ -16,14 +16,10 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          {/* Read{' '}
+          Read{' '}
           <Link href="/posts/first-post">
             <a>this page!</a>
-          </Link> */}
-          <h2 className="title">
-            <i className="fab fa-accessible-icon"></i>
-            Welcome <a href="https://nextjs.org">Next.js!</a>
-          </h2>
+          </Link>
         </h1>
         <Title />
         <InputForm />
